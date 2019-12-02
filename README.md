@@ -1,9 +1,7 @@
 Installing CUDA 10.0 and CUDnn 7.6 on Ubuntu 18.04, for pytorch (~1.3) and tensorflow (~2.0, 1.14-1.15) to both be able to use the GPU
 Also git, anaconda, pytorch, tensorflow, etc
 
-#CUDA and CUDnn
-
-##1. Install nvidia drivers if they aren't installed already
+## 1. Install nvidia drivers if they aren't installed already
 
 - Add nvidia PPA
 ```
@@ -22,7 +20,7 @@ sudo reboot
 ```
 nvidia-smi
 ```
-##2. Install CUDA
+## 2. Install CUDA
 
 - Install dependencies
 ```
@@ -49,7 +47,7 @@ sudo ldconfig
 ```
 nvcc --version
 ```
-##3. Install CUDnn
+## 3. Install CUDnn
 
 - Download the correct version of CUDnn (I got CUDnn version 7.6 for Cuda 10.0) from https://developer.nvidia.com/cudnn (requires an nVidia developer account)
 
@@ -57,7 +55,7 @@ nvcc --version
 ```
 sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
 ```
-4. Install Anaconda
+## 4. Install Anaconda
 
 - Get install script from https://www.anaconda.com/distribution/#linux
 ```
@@ -67,11 +65,11 @@ wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 sh https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
-5. (Optional) Install Git
+## 5. (Optional) Install Git
 ```
 sudo apt install git
 ```
-6. (Optional) Make a dummy conda environment, install pytorch and tensorflow, check that they can access the GPU
+## 6. (Optional) Make a dummy conda environment, install pytorch and tensorflow, check that they can access the GPU
 ```
 conda create -n dummy python=3.7
 conda activate dummy
